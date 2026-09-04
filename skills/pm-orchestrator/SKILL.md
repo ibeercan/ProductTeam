@@ -37,6 +37,7 @@ Detect the language of the user's latest message. All artifacts, headings and re
 - Every brief carries a fallback: if the role skill cannot be loaded, the sub-agent follows the Context and Rules of the brief exactly.
 - The PM is the single writer of `backlog.md` and the only actor who merges. Sub-agents record verdicts in their own artifacts (run Verdicts, `gate-report.md`) and return summaries; you transcribe statuses.
 - Dev pairs: the author and the reviewer are always two different sub-agent instances; never let the author review its own MR.
+- Concurrency: parallel sub-agent runs are allowed only in safe slots — reviewers and QA verifiers (read-only over diffs), and the two requirements-gate reviews. Parallel dev-authors over one working copy are forbidden: they share a git index and stomp on each other. If parallel authoring is genuinely needed, first create separate `git worktree` checkouts (one per task) and point each brief at its own checkout. Merges stay serialized.
 - Review sub-agent output before showing it to the user: id consistency (US ↔ FR ↔ T ↔ TC), open questions present, language correct, no invented requirements. Fix trivial issues yourself; substantive rework goes back as a new sub-agent brief.
 - Never hand the user dialog to a sub-agent; never let a sub-agent edit artifacts beyond its designated output.
 

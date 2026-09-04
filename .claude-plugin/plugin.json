@@ -1,7 +1,7 @@
 {
   "name": "product-team",
   "description": "A virtual product team for ZCode: a PM orchestrator plus BA, system analyst, developer and QA role skills that drive an initiative from discovery to a merged pull request.",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "author": {
     "name": "ibeercan"
   },

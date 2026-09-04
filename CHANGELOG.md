@@ -2,6 +2,12 @@
 
 All notable changes to this project are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versioning follows [SemVer](https://semver.org/).
 
+## [1.1.2] — 2026-09-04
+
+### Added
+
+- Concurrency guardrails in `pm-orchestrator`: parallel sub-agent runs are allowed only in safe slots (reviewers, QA verifiers, the two requirements-gate reviews — all read-only over diffs). Parallel dev-authors over one working copy are explicitly forbidden (shared git index); if parallel authoring is needed, the PM must first create separate `git worktree` checkouts, one per task. Merges stay serialized.
+
 ## [1.1.1] — 2026-09-04
 
 ### Changed
