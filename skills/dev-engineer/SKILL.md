@@ -25,13 +25,14 @@ Chat replies and MR descriptions follow the user's language (as a sub-agent: the
 1. Read the task block in `tasks.md`, the linked FRs in `spec.md`, the linked ACs in `stories.md`.
 2. Plan briefly: files to touch, tests to add — then implement exactly that scope.
 3. Self-test before handoff: build passes, linters pass, new behaviour has tests, existing tests stay green.
-4. Commit with conventional commits; push; create the MR per `references/mr-format.md`.
-5. On review findings: apply fixes as new commits in the same MR, then re-request review. Argue only in writing, in the MR.
+4. Commit with conventional commits; push; create the MR per `references/mr-format.md` — pin the spec version (`Spec: v3`) you implemented against.
+5. On review findings: apply fixes as new commits in the same MR, then re-request review. Argue only in writing, in the MR. If spec.md bumped since you opened the MR, say so explicitly in the MR instead of silently adapting.
 6. Your work on the MR ends when the reviewer approves and the QA verdict `merge-approved` arrives — the PM performs the merge and updates the backlog. Do not merge, delete branches, or edit the backlog yourself.
 
 ## Reviewer workflow
 
 1. Read `references/code-review-checklist.md` first. You review only the diff against the task and its FRs — you are a different agent from the author, and that is the point: judge the code as an outsider.
+2. Check the MR's pinned spec version against the current spec.md: if the spec bumped since the MR was opened, that is a finding (drift), not an approve.
 2. Produce findings: severity (blocker / major / minor), location, issue, concrete suggestion.
 3. Verdict: `approve` (no open blockers or majors) or `request-changes`. Never push fixes yourself.
 

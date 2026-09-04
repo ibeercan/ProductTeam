@@ -41,6 +41,7 @@ Each initiative lives in `product/<initiative>/` in the project root: `brief.md`
 
 - **ID chain:** `US-xxx` (stories) → `FR-xxx` (spec) → `T-xxx` (tasks) → `TC-xxx` (test cases); backlog admin and user-decision rows use `A-xxx`; defects use `BUG-xxx` with a single register.
 - **Single writers:** only the PM writes `backlog.md` and merges; QA owns verdicts; SA owns the task list.
+- **Versioning:** every artifact carries an integer `Version` bumped on substantive change; downstream artifacts pin source versions (`Source: spec.md v3`), so a bumped upstream makes drift visible — dependents update or record "checked — no impact", and an open MR whose spec moved gets flagged at review instead of merging silently.
 - **Language:** artifacts follow the language of your latest message — work in Russian, English or anything else. IDs, Gherkin keywords, mermaid syntax and file names stay English.
 - **VCS:** GitHub via `gh` out of the box; GitLab via `glab` when installed.
 

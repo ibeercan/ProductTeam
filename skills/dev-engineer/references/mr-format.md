@@ -9,7 +9,7 @@
 ```markdown
 ## T-001: <task title>
 
-**Implements:** FR-001, FR-002 (US-001) | **Task:** T-001 | **Initiative:** <name>
+**Implements:** FR-001, FR-002 (US-001) | **Task:** T-001 | **Spec:** v3 | **Initiative:** <name>
 
 ### What changed
 <3–6 bullets>
@@ -25,6 +25,7 @@
 - [ ] New behaviour covered by tests
 - [ ] Self-reviewed the diff
 - [ ] Scope matches the task — nothing extra
+- [ ] `Spec:` version still current (spec.md unchanged since MR was opened)
 
 ### Notes
 <deviations from spec, noticed-but-not-fixed issues with a reason, follow-up candidates>

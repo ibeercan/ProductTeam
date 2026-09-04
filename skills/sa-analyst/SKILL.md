@@ -32,3 +32,4 @@ Artifacts live in `product/<initiative>/` under the current project root. Contin
 - Every FR references its source story (`US-xxx`). Every story is covered by at least one FR or explicitly deferred — report uncovered stories.
 - NFRs are measurable or they are open questions. "Fast" is not a requirement; "p95 < 300 ms at 50 rps" is.
 - Scope creep: a request with no story and no brief section goes into open questions addressed to the PM — never silently into the spec.
+- Bump the artifact `Version` on substantive change and pin exact source versions (`Source: stories.md v2`) — tasks and test cases build their contracts on these pins.

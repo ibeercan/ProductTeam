@@ -4,12 +4,14 @@ A miniature initiative showing how every ID links. Initiative folder: `product/c
 
 ## brief.md (excerpt)
 
-> Status: approved | Date: 2026-09-04
+> Status: approved | Version: 1 | Date: 2026-09-04
 
 - **Problem:** patients book clinic visits by phone; reception drowns in calls.
 - **MVP scope:** online booking of available slots; rescheduling; cancellation.
 
 ## stories.md (excerpt)
+
+> Version: 2 | Source: brief.md v1 | Status: agreed
 
 | ID | Title | MoSCoW | Status |
 |----|-------|--------|--------|
@@ -22,6 +24,8 @@ A miniature initiative showing how every ID links. Initiative folder: `product/c
 
 ## spec.md (excerpt)
 
+> Version: 2 | Source: stories.md v2, brief.md v1
+
 | ID | Story | Requirement | Priority |
 |----|-------|-------------|----------|
 | FR-001 | US-001 | POST /bookings accepts a slot id and patient id and returns a booking number. | Must |
@@ -29,12 +33,16 @@ A miniature initiative showing how every ID links. Initiative folder: `product/c
 
 ## tasks.md (excerpt)
 
+> Version: 1 | Source: spec.md v2 | Order: dependency-first
+
 | ID | Parent | Task | FR | Depends on | MR scope | Status |
 |----|--------|------|----|------------|----------|--------|
 | T-001 | — | Booking API endpoints | FR-001, FR-002 | — | api/ + tests | merged |
 | T-002 | — | Slot conflict handling | FR-002 | T-001 | conflict module + tests | in-qa |
 
 ## testcases.md (excerpt)
+
+> Version: 1 | Source: stories.md v2, spec.md v2
 
 | Story | AC | Cases | Types |
 |-------|----|-------|-------|
@@ -59,3 +67,7 @@ A miniature initiative showing how every ID links. Initiative folder: `product/c
 ## The chain, one line
 
 `US-001` (stories) → `FR-001/FR-002` (spec) → `T-001/T-002` (tasks) → `TC-001..003` (testcases) — every AC covered, every task linked to FRs, every verdict recorded in its home artifact.
+
+## The version chain, one story
+
+Versions tell the history: spec **v1** failed the requirements gate, **v2** passed — so tasks and test cases pin `spec.md v2`, the MR says `Spec: v2`, and the run journal records `Docs: spec v2, tasks v1`. When anyone bumps spec to v3, the pins make the drift visible: tasks/TCs must be updated or marked "no impact", and an open MR gets flagged at review instead of silently merging against a dead spec.

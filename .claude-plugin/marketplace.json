@@ -12,8 +12,10 @@
       "displayName": "ProductTeam",
       "source": "./",
       "description": "A virtual product team for ZCode: a PM orchestrator plus BA, system analyst, developer and QA role skills that drive an initiative from discovery to a merged pull request.",
-      "version": "1.0.1",
-      "author": { "name": "ibeercan" },
+      "version": "1.1.0",
+      "author": {
+        "name": "ibeercan"
+      },
       "icon": "https://raw.githubusercontent.com/ibeercan/ProductTeam/main/assets/icon.svg",
       "category": "productivity",
       "keywords": [

@@ -7,7 +7,7 @@ Read before writing or updating `tasks.md`. Decompose only when the spec is comp
 ```markdown
 # <Initiative> — Implementation Tasks
 
-> Source: spec.md (v<date>) | Order: dependency-first
+> Version: 1 | Source: spec.md v3 | Order: dependency-first
 
 ## Summary
 
@@ -28,6 +28,7 @@ Read before writing or updating `tasks.md`. Decompose only when the spec is comp
 
 ## Rules
 
+- Pin the exact spec version (`Source: spec.md v3`). If spec.md bumps after decomposition, either update the affected tasks and bump this version, or record "spec v4 checked — no impact" in Notes. Unchecked drift silently invalidates MR contracts.
 - `T-xxx` numbering starts fresh per initiative (implementation space) and is mirrored 1:1 in `backlog.md`; analysis/admin rows there use `A-xxx` — never mix the two spaces.
 - One task = exactly one reviewable MR. A task that obviously needs several MRs becomes a parent task with subtasks (`Parent` set, flat ID numbering — no dotted ids).
 - Every FR is covered by at least one task; every task links at least one FR (infrastructure/setup tasks are the only exception — mark `FR: —`).

@@ -7,7 +7,7 @@ Read this before writing or updating `stories.md`.
 ```markdown
 # <Initiative title> — User Stories
 
-> Source: brief.md (v<date>) | Status: draft
+> Version: 1 | Source: brief.md v1 | Status: draft
 
 ## Summary
 
@@ -39,7 +39,8 @@ Read this before writing or updating `stories.md`.
 - Title is a short capability phrase; the full sentence goes in the As-a / I-want / So-that line.
 - Typical story: 3–7 acceptance criteria. More than that — split the story.
 - MoSCoW: **Must** — release fails without it; **Should** — painful, but a workaround exists; **Could** — nice to have; **Won't** — explicitly out of this release. Keep Won't items listed: they prevent scope debates later.
-- Status values: `draft` / `reviewed` / `agreed`. Update the header date and the Summary `Status` column on every edit.
+- Status values: `draft` / `reviewed` / `agreed`. Update the header `Date` and Summary `Status` on every edit.
+- Bump `Version` on every substantive change — a story, AC or priority changed, not a typo fix. Downstream artifacts (spec, test cases) pin this version, so an invisible edit is a false contract.
 
 ## INVEST checklist
 

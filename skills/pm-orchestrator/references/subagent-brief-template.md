@@ -6,6 +6,7 @@ Global invariants for every brief:
 
 - The PM is the single writer of `backlog.md` — no sub-agent ever edits it; statuses are transcribed by the PM.
 - No sub-agent merges; the PM merges after the QA verdict.
+- Pin doc versions in the Context (e.g. "spec v3, tasks v2") — sub-agents work against those exact versions; the PM re-checks the pins at review.
 - Batching: up to 3 independent tasks per author run, up to 3 MRs per reviewer or QA-verification run (each task still gets its own MR).
 - Every brief ends with a fallback line: if the role skill cannot be loaded, follow the Context and Rules of the brief exactly.
 

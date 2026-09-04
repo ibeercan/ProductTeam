@@ -2,6 +2,14 @@
 
 All notable changes to this project are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versioning follows [SemVer](https://semver.org/).
 
+## [1.1.0] — 2026-09-04
+
+### Added
+
+- **Artifact versioning across the pipeline**: every artifact (brief, stories, spec, tasks, test cases) carries an integer `Version` bumped on substantive change; downstream artifacts pin exact source versions (`Source: spec.md v3`) instead of dates.
+- **Drift protection**: a bumped upstream forces dependents to update or record "checked — no impact"; a spec bump after the requirements gate re-runs the gate; MR descriptions pin the spec version (`Spec: v3`) and reviewers flag an MR whose spec moved instead of approving; test run journal records the doc versions verified (`Docs: spec v3, tasks v2`).
+- Worked example extended with the version chain (spec v1 fails the gate → v2 passes → all pins follow).
+
 ## [1.0.1] — 2026-09-04
 
 ### Added

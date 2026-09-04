@@ -5,7 +5,7 @@
 ```markdown
 # <Initiative> — Test Cases
 
-> Source: stories.md v<date>, spec.md v<date>
+> Version: 1 | Source: stories.md v2, spec.md v3
 
 ## Coverage summary
 
@@ -33,4 +33,5 @@
 - Every step has its own expected result; a case has exactly one verification objective.
 - Preconditions only state what the case itself does not create.
 - Found defects go to a `## Defects` section as `BUG-001`-style entries (steps to reproduce, actual vs expected, severity) — not into the cases. That section is the initiative-wide bug register: numbering continues here (next free = the max across all initiative artifacts); testrun reports and backlog rows reference it, they never renumber it.
+- Pin the exact source versions in the header. If stories or spec bump afterwards, either update the affected cases and bump this version, or record "spec v4 checked — no impact" under Notes.
 - Coverage summary is regenerated on every edit: every AC of every story appears there with at least one TC id.

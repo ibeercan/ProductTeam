@@ -5,7 +5,7 @@ Headings in the artifact language. Write the brief only after discovery answers 
 ```markdown
 # <Initiative title> — Product Brief
 
-> Status: draft | Date: <date> | PM: pm-orchestrator
+> Status: draft | Version: 1 | Date: <date> | PM: pm-orchestrator
 
 ## Problem
 <2–4 sentences: the pain, who has it, what they do today.>
@@ -43,4 +43,4 @@ Headings in the artifact language. Write the brief only after discovery answers 
 - Every section either has content or a marked assumption — no empty sections.
 - Success metrics are measurable: "more users" is not a metric; "30% of active patients book online within 3 months" is.
 - MVP scope uses user-visible capabilities, not technical components.
-- Keep the header honest: update `Date:` and `Status:` (draft → reviewed → approved) on every edit.
+- Keep the header honest: update `Date:` and `Status:` (draft → reviewed → approved) on every edit, and bump `Version:` on substantive change — stories.md pins this version.

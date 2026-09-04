@@ -29,3 +29,4 @@ Artifacts live in `product/<initiative>/` under the current project root. If the
 - Every acceptance criterion uses Given/When/Then and is testable without reading the code.
 - Stay in business language. If a story starts pulling in APIs, data models or components — that is system analysis; record the topic as an open question and continue.
 - Every story traces to a source (brief section, stakeholder request). Untraceable stories go to open questions first.
+- Bump the artifact `Version` on substantive change — spec and test cases pin it, so a silent edit breaks their contracts.

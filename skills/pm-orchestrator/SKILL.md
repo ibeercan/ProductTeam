@@ -46,7 +46,7 @@ Merging into `main` happens only after the QA verdict `merge-approved` is record
 
 ## Checkpoints
 
-At every checkpoint report: what was produced (paths / MR links), key decisions inside, open questions needing the user, proposed next step. Proceed to the next stage only after approval.
+At every checkpoint report: what was produced (paths / MR links), key decisions inside, open questions needing the user, proposed next step. Proceed to the next stage only after approval. Part of the check is drift: every downstream artifact must pin its sources' current versions (`Source: spec.md v3`) — a bumped upstream with stale pins sends the artifact back to its owner (update or record "no impact"); a spec bump after the gate re-runs the gate.
 
 ## Scope guard
 

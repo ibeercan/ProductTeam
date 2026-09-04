@@ -7,7 +7,7 @@ Read before writing or updating `spec.md`. Section headings in the artifact lang
 ```markdown
 # <Initiative> — Technical Specification
 
-> Source: stories.md (v<date>), brief.md (v<date>)
+> Version: 1 | Source: stories.md v2, brief.md v1
 
 ## 1. Overview
 <2–4 sentences: what is being built and for whom.>
