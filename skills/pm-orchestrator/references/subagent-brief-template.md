@@ -8,13 +8,14 @@ Global invariants for every brief:
 - No sub-agent merges; the PM merges after the QA verdict.
 - Pin doc versions in the Context (e.g. "spec v3, tasks v2") — sub-agents work against those exact versions; the PM re-checks the pins at review.
 - Batching: up to 3 independent tasks per author run, up to 3 MRs per reviewer or QA-verification run (each task still gets its own MR).
+- Skill loading in every brief is a strict two-step: primary — load the role skill by name via the Skill tool; fallback — read the SKILL.md path given in the brief. This keeps sub-agent traces uniform (`Skill: <role>` at the top) and catches broken installs early.
 - Every brief ends with a fallback line: if the role skill cannot be loaded, follow the Context and Rules of the brief exactly.
 
 ## BA / SA / QA stages
 
 ```text
 Role: You are the <ba-analyst | sa-analyst | qa-tester> for this stage.
-Standard: Load the <role> skill; read SKILL.md and only these references: <list from the stage below>.
+Standard: Load the <role> skill via the Skill tool (by name). If that fails, read <absolute path to SKILL.md> directly. Read ONLY these references: <list from the stage below>.
 Output language: <detected user language>.
 
 Inputs (read these):
@@ -43,7 +44,7 @@ Reference scope per stage: BA → stories-guide, process-guide (if mapping). SA 
 
 ```text
 Role: You are the dev-engineer (author) for task <T-xxx>[, <T-yyy>, <T-zzz> — independent tasks].
-Standard: Load the dev-engineer skill; read SKILL.md + references/mr-format.md.
+Standard: Load the dev-engineer skill via the Skill tool (by name). If that fails, read <absolute path to SKILL.md> directly. Then read references/mr-format.md.
 Repo: <absolute path> | Base branch: main | Branch per task: feature/T-xxx-<short-slug>
 Output language for chat and MR description: <detected user language>.
 
@@ -70,7 +71,7 @@ Return to PM: MR url/number per task, what changed, test evidence, any deviation
 
 ```text
 Role: You are the dev-engineer (reviewer) for MR <url/number> (task <T-xxx>)[, up to 3 MRs per run].
-Standard: Load the dev-engineer skill; read SKILL.md + references/code-review-checklist.md.
+Standard: Load the dev-engineer skill via the Skill tool (by name). If that fails, read <absolute path to SKILL.md> directly. Then read references/code-review-checklist.md.
 Output language: <detected user language>.
 
 Inputs (read these):
@@ -95,7 +96,7 @@ Return to PM: verdict + findings summary per MR.
 
 ```text
 Role: You are the qa-tester verifying task <T-xxx> on MR <url/number>[, up to 3 MRs per run].
-Standard: Load the qa-tester skill; read SKILL.md + references/testrun-report-template.md + references/testcase-format.md.
+Standard: Load the qa-tester skill via the Skill tool (by name). If that fails, read <absolute path to SKILL.md> directly. Then read references/testrun-report-template.md and references/testcase-format.md.
 Output language: <detected user language>.
 
 Inputs (read these):

@@ -2,6 +2,12 @@
 
 All notable changes to this project are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versioning follows [SemVer](https://semver.org/).
 
+## [Unreleased]
+
+### Changed
+
+- Sub-agent brief template: skill loading is now a strict two-step — primary route is the Skill tool by name (uniform `Skill: <role>` trace, catches broken installs early), explicit SKILL.md file read as fallback, Context/Rules of the brief as the last resort. Previously the wording allowed both routes, so different agents picked different ones.
+
 ## [1.1.0] — 2026-09-04
 
 ### Added
