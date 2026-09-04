@@ -2,6 +2,14 @@
 
 All notable changes to this project are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versioning follows [SemVer](https://semver.org/).
 
+## [1.0.1] — 2026-09-04
+
+### Added
+
+- Marketplace support: `.claude-plugin/marketplace.json` index — the repository can now be added directly as a plugin marketplace in ZCode (and Claude Code-compatible clients).
+- Claude-compatible plugin manifest `.claude-plugin/plugin.json` alongside the native `.zcode-plugin/plugin.json`.
+- Plugin icon (`assets/icon.svg`), marketplace category and keywords.
+
 ## [1.0.0] — 2026-09-04
 
 Initial release.

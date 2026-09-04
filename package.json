@@ -1,6 +1,6 @@
 {
   "name": "@ibeercan/productteam-plugin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "license": "MIT",
   "description": "ProductTeam — virtual product team skills (PM, BA, SA, Dev, QA) for ZCode.",

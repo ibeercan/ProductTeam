@@ -46,9 +46,9 @@ Each initiative lives in `product/<initiative>/` in the project root: `brief.md`
 
 ## Installation
 
-### From a plugin marketplace
+### As a plugin marketplace (recommended)
 
-Once listed in a marketplace (official or your own), install from the ZCode client: Settings → Plugin Management.
+This repository is a plugin marketplace index. In ZCode: Settings → Plugin Management → add marketplace → point it at this repo (`ibeercan/ProductTeam`), then install **ProductTeam** from it.
 
 ### Manual
 
