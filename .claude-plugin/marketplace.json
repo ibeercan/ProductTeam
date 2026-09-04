@@ -1,6 +1,6 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
-  "name": "productteam",
+  "name": "product-team",
   "description": "Virtual product team for ZCode: PM orchestrator plus BA, system analyst, developer and QA role skills that drive an initiative from discovery to a merged pull request.",
   "owner": {
     "name": "ibeercan",
