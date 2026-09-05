@@ -19,7 +19,7 @@ Detect the language of the user's latest message. All artifacts, headings and re
 
 0. **Discovery** — ask up to 5 batched questions per round (bank: `references/discovery-questions.md`). When answers suffice, write `brief.md` per `references/brief-template.md` and get explicit user approval.
 1. **Setup** — create `product/<initiative>/`, write `brief.md`, create `backlog.md` per `references/backlog-format.md`.
-2. **BA stage** — delegate per `references/subagent-brief-template.md`; outputs: `stories.md`, `process.md`. Checkpoint.
+2. **BA stage** (product initiatives) — delegate per `references/subagent-brief-template.md`; outputs: `stories.md`, `process.md`. Checkpoint. **Game initiatives**: this stage is replaced by the **game-designer stage** — outputs `gdd.md`, `balance.md` (or .xlsx), `narrative.md` only if the game has a story; delegate the same way. A game initiative also gets an **asset-manager stage** after SA decomposition: `assets.md` (registry, style guide, placeholders).
 3. **SA stage** — same; outputs: `spec.md`, `diagrams.md`, `tasks.md` (implementation decomposition), plus `api/openapi.yaml` if needed. Checkpoint.
 4. **Requirements gate** — delegate the SA audit and the QA testability review; both write dated sections into `gate-report.md` with a PASS/FAIL verdict. Any FAIL loops findings back to a new SA sub-agent, then the gate re-runs. Never start development on an unpassed gate.
 5. **QA design stage** — outputs: `testplan.md`, `testcases.md`. Checkpoint.

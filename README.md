@@ -27,6 +27,8 @@ Pipeline: **discovery → brief → user stories → spec + task decomposition �
 | `sa-analyst` | System analyst: technical spec (FR ↔ story), integrations, NFRs, C4/sequence/ER diagrams, decomposition into one-MR tasks, spec audits |
 | `dev-engineer` | Developer: one task = one MR, conventional commits, self-test before handoff; separate reviewer workflow with a code-review checklist |
 | `qa-tester` | QA: requirements testability gate, test cases with AC coverage, per-MR verification, `merge-approved`/`hold` verdicts, append-only run journal, bug lifecycle |
+| `game-designer` | Game initiatives: GDD (pillars, core loop, `MECH-xxx` mechanics), balance tables (`BAL-xxx`), level briefs (`LVL-xxx`), optional narrative (`QUEST-xxx`) — replaces the BA stage for games |
+| `asset-manager` | Game asset pipeline: registry (`ASSET-xxx`), style guide, Phaser import specs, CC0 sourcing, placeholder policy — art creation stays with the human/external tools |
 
 ## Built-in quality gates
 
@@ -39,7 +41,7 @@ Pipeline: **discovery → brief → user stories → spec + task decomposition �
 
 Each initiative lives in `product/<initiative>/` in the project root: `brief.md`, `backlog.md`, `stories.md`, `process.md`, `spec.md`, `tasks.md`, `gate-report.md`, `diagrams.md`, `testplan.md`, `testcases.md`, `testrun-report.md` (append-only journal).
 
-- **ID chain:** `US-xxx` (stories) → `FR-xxx` (spec) → `T-xxx` (tasks) → `TC-xxx` (test cases); backlog admin and user-decision rows use `A-xxx`; defects use `BUG-xxx` with a single register.
+- **ID chain:** `US-xxx` (stories) → `FR-xxx` (spec) → `T-xxx` (tasks) → `TC-xxx` (test cases); backlog admin and user-decision rows use `A-xxx`; defects use `BUG-xxx` with a single register. Game extensions: `MECH-xxx`/`LVL-xxx`/`QUEST-xxx` derive FRs exactly like stories, `BAL-xxx` balance ids bind to a generated constants module, `ASSET-xxx` ids key the Phaser preload manifest.
 - **Single writers:** only the PM writes `backlog.md` and merges; QA owns verdicts; SA owns the task list.
 - **Versioning:** every artifact carries an integer `Version` bumped on substantive change; downstream artifacts pin source versions (`Source: spec.md v3`), so a bumped upstream makes drift visible — dependents update or record "checked — no impact", and an open MR whose spec moved gets flagged at review instead of merging silently.
 - **Language:** artifacts follow the language of your latest message — work in Russian, English or anything else. IDs, Gherkin keywords, mermaid syntax and file names stay English.

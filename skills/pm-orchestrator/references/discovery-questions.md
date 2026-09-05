@@ -28,6 +28,14 @@ Ask in the user's language, batched (max 5 per round), and stop asking when you 
 - What has killed similar attempts before?
 - Who can block this (legal, security, a vendor)?
 
+## Games (when the idea is a game)
+
+- Platform and engine already fixed? (default: web, Phaser 3 + TypeScript) Desktop browser only, or mobile/touch too?
+- Session shape: how long is one run, what does the player chase (score, story, mastery)?
+- Scope fence: prototype/jam (core loop only) or commercial MVP? What is explicitly NOT in v1?
+- Art: placeholder-first okay? Any existing assets/style references, or CC0 packs (Kenney etc.) accepted?
+- Monetization/release target (itch.io page, Steam someday, free)? It changes scope, not the loop.
+
 ## Fill rule
 
 A brief section with no answer either gets a reasonable assumption (marked "assumption — confirm") or becomes an open question in `backlog.md`. Never block discovery on a question the user cannot answer now.

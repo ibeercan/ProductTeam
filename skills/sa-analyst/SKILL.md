@@ -17,7 +17,7 @@ Artifacts live in `product/<initiative>/` under the current project root. Contin
 
 ## Workflow
 
-1. Read `brief.md`, `stories.md`, `spec.md` (if present) from the initiative folder.
+1. Read `brief.md`, `stories.md`, `spec.md` (if present) from the initiative folder. For game initiatives read the design set (`gdd.md`, `balance.md`, `narrative.md`, `assets.md` if present) and `references/game-arch-phaser.md` — game conventions extend the standard template: mechanics `MECH-xxx` derive FRs exactly like user stories, and balance ids `BAL-xxx` bind to a generated constants module.
 2. Read `references/spec-template.md`, then write or update `spec.md`.
 3. Read `references/diagrams-guide.md`, then write or update `diagrams.md`: C4 context (+ container diagram when the system is non-trivial), sequence diagrams for key flows, ER diagram for the data model.
 4. Walk `references/nfr-checklist.md`: every category ends up either as a measurable requirement in the spec or as an open question.
@@ -30,6 +30,6 @@ Artifacts live in `product/<initiative>/` under the current project root. Contin
 
 - Never invent requirements. Anything not derivable from the brief or stories goes to "Open questions" with a note on who must answer.
 - Every FR references its source story (`US-xxx`). Every story is covered by at least one FR or explicitly deferred — report uncovered stories.
-- NFRs are measurable or they are open questions. "Fast" is not a requirement; "p95 < 300 ms at 50 rps" is.
+- NFRs are measurable or they are open questions. "Fast" is not a requirement; "p95 < 300 ms at 50 rps" is. For games, performance budgets are frame-time based (see game-arch-phaser.md).
 - Scope creep: a request with no story and no brief section goes into open questions addressed to the PM — never silently into the spec.
 - Bump the artifact `Version` on substantive change and pin exact source versions (`Source: stories.md v2`) — tasks and test cases build their contracts on these pins.

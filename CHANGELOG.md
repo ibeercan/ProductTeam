@@ -2,6 +2,16 @@
 
 All notable changes to this project are documented here. The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/) and versioning follows [SemVer](https://semver.org/).
 
+## [1.2.0] — 2026-09-05
+
+### Added — game dev mode (indie games on Phaser 3)
+
+- **`game-designer` skill**: GDD standard (pillars, core loop, `MECH-xxx` mechanics with "fun because…" + testable behavior), balance tables (`BAL-xxx`, markdown or xlsx via the document skill), level briefs (`LVL-xxx`), optional narrative standard (characters, quests `QUEST-xxx`, dialogue trees in mermaid). Replaces the BA stage for game initiatives.
+- **`asset-manager` skill**: asset registry (`ASSET-xxx` = Phaser load keys), style guide, Phaser import specs (spritesheets, atlases, Tiled-JSON tilemaps, ogg/mp3 audio), placeholder-first policy, CC0 sourcing with per-asset license tracking.
+- **`sa-analyst` game architecture reference (Phaser 3)**: TS + Vite stack, scene architecture with logic outside scenes, generated balance constants module bound to `BAL-xxx`, versioned save schema with migrations, Vitest strategy.
+- **`qa-tester` game QA reference**: playtest protocol (first minute, core loop N≥3, friction log, per-pillar fun verdict), frame-time performance budgets, save-integrity cases (corrupt/upgrade), browser matrix; live smoke via `web-gui-tester` (main agent).
+- **`pm-orchestrator`**: game pipeline branch (game-designer stage instead of BA; asset-manager stage after SA decomposition) and a game block in the discovery question bank (engine, session shape, scope fence, art policy, release target).
+
 ## [1.1.2] — 2026-09-04
 
 ### Added

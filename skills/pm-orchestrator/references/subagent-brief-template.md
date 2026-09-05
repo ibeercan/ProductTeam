@@ -38,7 +38,7 @@ If the role skill cannot be loaded, follow the Context and Rules of this brief e
 Return to PM: 5–10 line summary — what was produced, counts, open questions, blockers.
 ```
 
-Reference scope per stage: BA → stories-guide, process-guide (if mapping). SA spec → spec-template, diagrams-guide, nfr-checklist. SA decomposition → decomposition-guide. SA audit → review-checklist (output: dated section in gate-report.md). QA design → testcase-format, coverage-checklist. QA testability gate → testcase-format (output: dated section in gate-report.md).
+Reference scope per stage: BA → stories-guide, process-guide (if mapping). Game designer → gdd-guide, balance-guide, narrative-guide (only if the game has a story). Asset manager → asset-registry-format. SA spec → spec-template, diagrams-guide, nfr-checklist (+ game-arch-phaser for game initiatives). SA decomposition → decomposition-guide. SA audit → review-checklist (output: dated section in gate-report.md). QA design → testcase-format, coverage-checklist (+ game-qa for game initiatives). QA testability gate → testcase-format (output: dated section in gate-report.md).
 
 ## Dev stage — author
 
